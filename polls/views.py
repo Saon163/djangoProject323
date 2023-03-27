@@ -106,3 +106,43 @@ def contact(request):
         'writer' : writer,
     }
     return HttpResponse(temp.render(context, request))
+
+def index3(request):
+    name = 'HUFS'
+    cities = [
+    {'name': 'Mumbai', 'population': '19,000,000', 'country': 'India'},
+    {'name': 'Calcutta', 'population': '15,000,000', 'country': 'India'},
+    {'name': 'New York', 'population': '20,000,000', 'country': 'USA'},
+    {'name': 'Chicago', 'population': '7,000,000', 'country': 'USA'},
+    {'name': 'Tokyo', 'population': '33,000,000', 'country': 'Japan'},
+    ]
+    temp = loader.get_template('hellotable.html')
+    context = {
+        'name' : name,
+        'cities' : cities,
+        }
+    return HttpResponse(temp.render(context, request))
+
+def contact2(request):
+    writer = "Bernardo"
+    temp = loader.get_template('blog3/contact.html')
+    context = {
+        'writer' : writer,
+    }
+    return HttpResponse(temp.render(context, request))
+
+def index4(request):
+    name = 'HUFS'
+    cities = [
+    {'name': 'Mumbai', 'population': '19,000,000', 'country': 'India'},
+    {'name': 'Calcutta', 'population': '15,000,000', 'country': 'India'},
+    {'name': 'New York', 'population': '20,000,000', 'country': 'USA'},
+    {'name': 'Chicago', 'population': '7,000,000', 'country': 'USA'},
+    {'name': 'Tokyo', 'population': '33,000,000', 'country': 'Japan'},
+    ]
+    temp = loader.get_template('blog3/data.html')
+    context = {
+        'name' : name,
+        'cities' : cities,
+        }
+    return HttpResponse(temp.render(context, request))

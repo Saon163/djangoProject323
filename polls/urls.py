@@ -38,6 +38,8 @@ urlpatterns = [
 
 from django.urls import path
 
+from django.urls import path
+
 from polls import views
 
 urlpatterns = [
@@ -51,4 +53,17 @@ urlpatterns = [
     path('blog/',views.blog, name = 'blog'),
     path('tablecss/', views.index2, name = 'index2'),
     path('contact/',views.contact, name = 'contact'),
+    path('7/',views.index3, name = 'index3'),
+]
+
+from django.urls import path
+
+from polls import views
+
+urlpatterns = [
+
+    path('contact/', views.contact2, name='contact2'),
+    path('data/', views.index4, name='data'),
+    path('home/', views.home, name='home'),
+    path('blog/', views.blog, name='blog'),
 ]
